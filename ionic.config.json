@@ -1,0 +1,7 @@
+{
+  "name": "apptask",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
