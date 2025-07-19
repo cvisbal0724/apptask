@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Auditoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Listado</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+    <ion-list>
+    <ion-item *ngFor="let audit of audits">
+      <ion-label>
+        <h2>{{ audit.task.description }}</h2>
+        <p>{{ audit.status }} • {{ audit.user.first_name }} {{ audit.user.last_name }} • {{ audit.created_at | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
